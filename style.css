@@ -1,0 +1,98 @@
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /*Grid Laypout*/
+  .container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1.7fr 0.4fr 2fr;
+    grid-template-areas:  
+      "navbar navbar navbar"
+      "header header header"
+      "feature-1 feature-2 feature-3"
+      "signup signup signup"
+      "content content content";
+    grid-gap: 0.2rem;
+    color: rgb(18, 17, 17);
+    text-align: center;
+    font-size: 1.3rem;                    
+  }
+  
+  nav{
+    background-color: rgb(7, 108, 249);
+    grid-area: navbar;
+  }
+  
+  header{
+    background-color: rgb(129, 173, 239);
+    grid-area: header;
+  }
+  
+  .feature-1{
+    background-color: rgb(230, 226, 109);
+    grid-area: feature-1;
+  }
+  
+  .feature-2{
+    background-color: rgb(221, 73, 73);
+    grid-area: feature-2;
+  }
+  
+  .feature-3{
+    background-color: rgb(220, 44, 220);
+    grid-area: feature-3;
+  }
+  
+  .sign-up{
+    background-color: rgb(66, 113, 142);
+    grid-area: signup;
+  }
+  
+  .content{
+    background-color: rgb(229, 222, 222);
+    grid-area: content;
+  }
+  
+  /* Media Queries for Various Devices*/
+  /*Tablet view*/
+  @media (max-width: 768px) {
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.4fr 1.5fr 1.5fr 1fr 1fr;
+      grid-template-areas:
+        "navbar navbar" 
+        "header header"
+        "content content"
+        "signup feature-1"
+        "feature-2 feature-3";
+      grid-gap: 0.2rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /*Mobile view*/
+  @media (max-width: 425px) {
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 1.5fr 1.5fr 0.4fr 0.4fr 0.4fr 0.4fr;
+      grid-template-areas:
+        "navbar" 
+        "header"
+        "content"
+        "signup"
+        "feature-1"
+        "feature-2"
+        "feature-3";
+      grid-gap: 0.2rem;
+      font-size: 0.9rem;
+    }
+  }
